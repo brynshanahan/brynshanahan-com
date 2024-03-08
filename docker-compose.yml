@@ -9,9 +9,7 @@ services:
       - .:/home/node/app
       - node_modules:/home/node/app/node_modules
     working_dir: /home/node/app/
-    command:
-      - corepack use pnpm@latest 
-      - sh -c "pnpm install && pnpm dev"
+    command:  sh -c "yarn install && yarn dev"
     depends_on:
       - postgres
     env_file:
